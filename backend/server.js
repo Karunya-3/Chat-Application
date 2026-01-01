@@ -7,7 +7,7 @@ const {addMessage}=require('./controllers/messageController');
 const {Socket}=require('socket.io-client');     
 
 const app=express();
-const PORT=5000;
+const PORT=process.env.PORT || 5000;
 //Load environment variables
 dotenv.config();
 const server=http.createServer(app);
