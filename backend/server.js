@@ -79,7 +79,7 @@ io.on('connection',(socket)=>{
     })
     //typing in backend
     socket.on('typing',(data)=>{
-        socket.broadcast.emit('userTyping',data);
+        socket.broadcast.emit('userTyping',data.user);
     })
     //send and receive message
     socket.on('sendMessage',(data)=>{
